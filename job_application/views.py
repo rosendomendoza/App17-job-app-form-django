@@ -31,3 +31,6 @@ def index(request):
             # Send a success message to the user via webpage
             messages.success(request, "Form submitted successfully!")
     return render(request=request, template_name='index.html')
+
+def about(request):
+    return render(request=request, template_name='about.html')

@@ -3,13 +3,13 @@ from .forms import ApplicationForm
 from .models import Form
 from django.contrib import messages
 from django.core.mail import EmailMessage
+from .admin import FormAdmin
 
 
 def index(request):
     if request.method == "POST":
         form = ApplicationForm(request.POST)
         if form.is_valid():
-
             # Fetch de user data
             first_name = form.cleaned_data["first_name"]
             last_name = form.cleaned_data["last_name"]
@@ -32,5 +32,14 @@ def index(request):
             messages.success(request, "Form submitted successfully!")
     return render(request=request, template_name='index.html')
 
+
 def about(request):
     return render(request=request, template_name='about.html')
+
+
+def contact(request):
+    return render(request=request, template_name='contact.html')
+
+
+def admin():
+    admin.site.register(Form, FormAdmin)

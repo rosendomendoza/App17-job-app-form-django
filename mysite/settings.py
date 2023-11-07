@@ -129,3 +129,6 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'profesor.rosendo@gmail.com'
 EMAIL_HOST_PASSWORD = 'faemzahnoffmvrcu'
+
+
+ALLOWED_HOSTS = ['192.168.0.17', 'localhost',  '127.0.0.1']

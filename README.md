@@ -1,3 +1,4 @@
 # What is this project?
-This is a Job Application Form made with Django. 
+This is the same Job Application Form (App16) made with Django. 
 Include the admin module. 
+ *** Made in Django ***
